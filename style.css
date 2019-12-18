@@ -636,6 +636,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -688,6 +689,14 @@ a:hover, a:active {
 	text-decoration: none;
 }
 
+.main-navigation  ul li a:link,
+.main-navigation ul li a:visited{
+	 display: block;
+	 padding: 10px 18px;
+	 border: 1px solid #BBB;
+	 border-bottom: none;
+ }
+ 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -824,7 +833,8 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0;
+	padding: 0;
 	/* Make sure select elements fit in widgets. */
 }
 
@@ -832,6 +842,11 @@ a:hover, a:active {
 	max-width: 100%;
 }
 
+.widget-title ul{
+	margin: 0;
+	padding: 0;
+
+}
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -983,3 +998,21 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/* Navigation menus */
+.main-navigation ul {
+	margin: 0;
+	padding: 0;
+
+ }
+ 
+
+ /* site header menu */
+
+ .main-navigation ul li a:link,
+ .main-navigation ul li a:visited{
+	 display: block;
+	 /*padding: 10px 18px;*/
+	 border: 1px solid #BBB;
+	 border-bottom: none;
+ }
