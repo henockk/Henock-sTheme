@@ -121,6 +121,9 @@ add_action( 'widgets_init', 'henock_s_theme_widgets_init' );
  */
 function henock_s_theme_scripts() {
 
+	wp_enqueue_style( "new", get_template_directory_uri().'/css/new.css', array(), '1.0', 'all' );
+
+
 	wp_enqueue_style( 'henock-s-theme_bootstrap_css', get_template_directory_uri(  ) . '/css/bootstrap.min.css' );
 
 	wp_enqueue_style( 'henock-s-theme-style', get_stylesheet_uri() );
