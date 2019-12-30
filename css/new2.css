@@ -1,44 +1,61 @@
-/* site header menu */
-
-.main-navigation ul li a:link,
- .main-navigation ul li a:visited{
-	  display: block;
-	  padding: 10px 18px;
-	  border: 1px solid #BBB;
-	  border-bottom: none;
- } 
- .main-navigation ul {
-	margin: 0;
-	padding: 0;
-
- }
-
- .main-navigation ui a:hover strong,.main-navigation ui a.active strong {
-  display:block;
-  font-size:10px;
-  padding:3px 0;
-  position:absolute;
-  bottom:0px;
-  left:0;
-  background:#e67e22;
-  color:#FFF;
-  min-width:100%;
-  text-transform:lowercase;
-  font-weight:normal;
-  text-align:center;
+body { 
+	background: #EEE; 
+	overflow-x:hidden;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
 }
 
- /* sidebar */
- .widget-area{
-    display: block;
-    margin: 0;
-  padding: 0;
-  max-width: max-content;
- }
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+.container {
+    position: relative;
+    margin: 0px auto;
+    padding: 50px 0;
+    clear: both;
+}
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1210px;
+    }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .container {
+        width: 1030px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .container {
+        width: 682px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 428px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .container {
+        width: 320px;
+        margin: 0 auto;
+    }
+}
 
 
   
-.widget-area {
+.main-navigation {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -52,11 +69,11 @@
   width: 250px;
   /* == */
 }
-.widget-area li {
+.main-navigation li {
   position: relative;
   /*float:left;*/
 }
-.widget-area li a {
+.main-navigation li a {
   display: block;
   text-decoration: none;
   padding: 12px 20px;
@@ -71,7 +88,7 @@
   border-bottom: 1px solid #EEE;
   /* == */
 }
-.widget-area li a i {
+.main-navigation li a i {
   /*display: block;
   font-size: 30px;
   margin-bottom: 10px;*/
@@ -84,25 +101,59 @@
   
 }
 /* == */
-.widget-area li a p {
+.main-navigation li a p {
   float: left;
   margin: 0 ;
 }
 /* == */
 
-.widget-area li a strong {
+.main-navigation li a strong {
   display: block;
   text-transform: uppercase;
 }
-.widget-area li a small {
+.main-navigation li a small {
   display: block;
   font-size: 10px;
 }
 
-.widget-area li:hover > a {
+.main-navigation li a i, .main-navigation li a strong, .main-navigation li a small {
+  position: relative;
+  
+  transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -webkit-transition: all 300ms linear;
+}
+.main-navigation li:hover > a i {
+    opacity: 1;
+    -webkit-animation: moveFromTop 300ms ease-in-out;
+    -moz-animation: moveFromTop 300ms ease-in-out;
+    -ms-animation: moveFromTop 300ms ease-in-out;
+    -o-animation: moveFromTop 300ms ease-in-out;
+    animation: moveFromTop 300ms ease-in-out;
+}
+.main-navigation li:hover a strong {
+    opacity: 1;
+    -webkit-animation: moveFromLeft 300ms ease-in-out;
+    -moz-animation: moveFromLeft 300ms ease-in-out;
+    -ms-animation: moveFromLeft 300ms ease-in-out;
+    -o-animation: moveFromLeft 300ms ease-in-out;
+    animation: moveFromLeft 300ms ease-in-out;
+}
+.main-navigation li:hover a small {
+    opacity: 1;
+    -webkit-animation: moveFromRight 300ms ease-in-out;
+    -moz-animation: moveFromRight 300ms ease-in-out;
+    -ms-animation: moveFromRight 300ms ease-in-out;
+    -o-animation: moveFromRight 300ms ease-in-out;
+    animation: moveFromRight 300ms ease-in-out;
+}
+
+.main-navigation li:hover > a {
   color: #e67e22;
 }
-.widget-area li a.active {
+.main-navigation li a.active {
   position: relative;
   color: #e67e22;
   border:0;
@@ -119,7 +170,7 @@
   margin: 0 -4px;
   /* == */
 }
-.widget-area li a.active:before {
+.main-navigation li a.active:before {
   content: "";
   position: absolute;
   /*top: 0;
@@ -138,7 +189,7 @@
 }
 
 /* == */
-.widget-area li a.active:after {
+.main-navigation li a.active:after {
   content: "";
   position: absolute;
   top: 42%;
@@ -147,7 +198,7 @@
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
-
+/* == */
 
 @-webkit-keyframes moveFromTop {
     from {
@@ -206,9 +257,8 @@
 
 
 
-.widget-area li ul,
-.widget-area li ul li ul {
-    -style: none;
+.main-navigation li ul,
+.main-navigation li ul li ul {
   position: absolute;
   height: auto;
   min-width: 200px;
@@ -232,7 +282,7 @@
   border-left: 4px solid #e67e22;
   /* == */
 }
-.widget-area li ul:before {
+.main-navigation li ul:before {
   content: "";
   position: absolute;
   /*top: -8px;
@@ -249,8 +299,8 @@
   border-top: 5px solid transparent;
   /* == */
 }
-.widget-area li:hover > ul,
-.widget-area li ul li:hover > ul {
+.main-navigation li:hover > ul,
+.main-navigation li ul li:hover > ul {
   display: block;
   opacity: 1;
   visibility: visible;
@@ -260,10 +310,10 @@
   left:250px;
   /* == */
 }
-/*.widget-area li ul li {
+/*.main-navigation li ul li {
   float: none;
 }*/
-.widget-area li ul li a {
+.main-navigation li ul li a {
   padding: 10px;
   text-align: left;
   border: 0;
@@ -273,18 +323,18 @@
   height: auto;
   /* == */
 }
-.widget-area li ul li a i {
+.main-navigation li ul li a i {
   font-size: 16px;
   display: inline-block;
   margin: 0 10px 0 0;
 }
-.widget-area li ul li ul {
+.main-navigation li ul li ul {
   left: 230px;
   top: 0;
   border: 0;
   border-left: 4px solid #e67e22;
 }  
-.widget-area li ul li ul:before {
+.main-navigation li ul li ul:before {
   content: "";
   position: absolute;
   top: 15px;
@@ -296,27 +346,27 @@
   border-bottom: 5px solid transparent;
   border-top: 5px solid transparent;
 }
-.widget-area li ul li:hover > ul {
+.main-navigation li ul li:hover > ul {
   top: 0px;
   left: 200px;
 }
 
 
 
-/*.widget-area li.float {
+/*.main-navigation li.float {
   float: right;
 }*/
-.widget-area li a.search {
+.main-navigation li a.search {
   /*padding: 29px 20px 30px 10px;*/
   padding: 10px 10px 15px 10px;
   clear: both;
 }
-.widget-area li a.search i {
+.main-navigation li a.search i {
   margin: 0;
   display: inline-block;
   font-size: 18px;
 }
-.widget-area li a.search input {
+.main-navigation li a.search input {
   border: 1px solid #EEE;
   padding: 10px;
   background: #FFF;
@@ -328,7 +378,7 @@
   float:left;
   /* == */
 }
-.widget-area li a.search button {
+.main-navigation li a.search button {
   border: 1px solid #e67e22;
   /*padding: 10px;*/
   background: #e67e22;
@@ -341,7 +391,7 @@
   padding: 10px 10px 11px 10px;
   /* == */
 }
-.widget-area li a.search input:focus {
+.main-navigation li a.search input:focus {
   border: 1px solid #e67e22;
 }
 
@@ -359,77 +409,77 @@
 
 
 @media only screen and (min-width: 960px) and (max-width: 1199px) {
-    .widget-area {
+    .main-navigation {
 		margin-left:10px;
 	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-    .widget-area {
+    .main-navigation {
 		width: 200px;
 	}
-	.widget-area li a {
+	.main-navigation li a {
 		height:30px;
 	}
-	.widget-area li a i {
+	.main-navigation li a i {
 		font-size: 22px;
 	}
-	.widget-area li a strong {
+	.main-navigation li a strong {
 		font-size: 12px;
 	}
-	.widget-area li a small {
+	.main-navigation li a small {
 		font-size: 10px;
 	}	
-	.widget-area li a.search input {
+	.main-navigation li a.search input {
 		width: 120px;
 		font-size: 12px;
 	}
-	.widget-area li a.search buton{
+	.main-navigation li a.search buton{
 		padding: 8px 10px 9px 10px;
 	}
-	.widget-area li > ul {
+	.main-navigation li > ul {
 		min-width:180px;
 	}
-	.widget-area li:hover > ul {
+	.main-navigation li:hover > ul {
 		min-width:180px;
 		left:200px;
 	}
-	.widget-area li ul li > ul, .widget-area li ul li ul li > ul {
+	.main-navigation li ul li > ul, .main-navigation li ul li ul li > ul {
 		min-width:150px;
 	}
-	.widget-area li ul li:hover > ul {
+	.main-navigation li ul li:hover > ul {
 		left:180px;
 		min-width:150px;
 	}
-	.widget-area li ul li ul li:hover > ul {
+	.main-navigation li ul li ul li:hover > ul {
 		left:150px;
 		min-width:150px;
 	}
-	.widget-area li ul a {
+	.main-navigation li ul a {
 		font-size:12px;
 	}
-	.widget-area li ul a i {
+	.main-navigation li ul a i {
 		font-size:14px;
 	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	
-	.widget-area { 
+	.main-navigation { 
 		width: 50px;
 	}
-	.widget-area li a { 
+	.main-navigation li a { 
 		position: relative;
 		padding: 12px 16px;
 		height:20px;
 	}
-	.widget-area li a small { 
+	.main-navigation li a small { 
 		display: none;
 	}
-	.widget-area li a strong { 
+	.main-navigation li a strong { 
 		display: none;
 	}
-	.widget-area li a:hover strong,.widget-area li a.active strong {
+	.main-navigation li a:hover strong,.main-navigation li a.active strong {
 		display:block;
 		font-size:10px;
 		padding:3px 0;
@@ -443,33 +493,32 @@
 		font-weight:normal;
 		text-align:center;
 	}
-	.widget-area li .search { 
+	.main-navigation li .search { 
 		display: none;
 	}
 	
-	.widget-area li > ul {
-        list-style-type: none;
+	.main-navigation li > ul {
 		min-width:180px;
 		left:70px;
 	}
-	.widget-area li:hover > ul {
+	.main-navigation li:hover > ul {
 		min-width:180px;
 		left:50px;
 	}
-	.widget-area li ul li > ul, .widget-area li ul li ul li > ul {
+	.main-navigation li ul li > ul, .main-navigation li ul li ul li > ul {
 		min-width:150px;
 	}
-	.widget-area li ul li:hover > ul {
+	.main-navigation li ul li:hover > ul {
 		left:180px;
 		min-width:150px;
 	}
-	.widget-area li ul li ul li > ul {
+	.main-navigation li ul li ul li > ul {
 		left:35px;
 		top: 45px;
 		border:0;
 		border-top:4px solid #e67e22;
 	}
-	.widget-area li ul li ul li > ul:before {
+	.main-navigation li ul li ul li > ul:before {
 		left:30px;
 		top: -9px;
 		border:0;
@@ -477,36 +526,36 @@
 		border-left:5px solid transparent;
 		border-right:5px solid transparent;
 	}
-	.widget-area li ul li ul li:hover > ul {
+	.main-navigation li ul li ul li:hover > ul {
 		left:30px;
 		min-width:150px;
 		top: 35px;
 	}
-	.widget-area li ul a {
+	.main-navigation li ul a {
 		font-size:12px;
 	}
-	.widget-area li ul a i {
+	.main-navigation li ul a i {
 		font-size:14px;
 	}
 	
 }
 
 @media only screen and (max-width: 479px) {
-    .widget-area { 
+    .main-navigation { 
 		width: 50px;
 	}
-	.widget-area li a { 
+	.main-navigation li a { 
 		position: relative;
 		padding: 12px 16px;
 		height:20px;
 	}
-	.widget-area li a small { 
+	.main-navigation li a small { 
 		display: none;
 	}
-	.widget-area li a strong { 
+	.main-navigation li a strong { 
 		display: none;
 	}
-	.widget-area li a:hover strong,.widget-area li a.active strong {
+	.main-navigation li a:hover strong,.main-navigation li a.active strong {
 		display:block;
 		font-size:10px;
 		padding:3px 0;
@@ -520,32 +569,32 @@
 		font-weight:normal;
 		text-align:center;
 	}
-	.widget-area li .search { 
+	.main-navigation li .search { 
 		display: none;
 	}
 	
-	.widget-area li > ul {
+	.main-navigation li > ul {
 		min-width:180px;
 		left:70px;
 	}
-	.widget-area li:hover > ul {
+	.main-navigation li:hover > ul {
 		min-width:180px;
 		left:50px;
 	}
-	.widget-area li ul li > ul, .widget-area li ul li ul li > ul {
+	.main-navigation li ul li > ul, .main-navigation li ul li ul li > ul {
 		min-width:150px;
 	}
-	.widget-area li ul li:hover > ul {
+	.main-navigation li ul li:hover > ul {
 		left:180px;
 		min-width:150px;
 	}
-	.widget-area li ul li ul li > ul {
+	.main-navigation li ul li ul li > ul {
 		left:35px;
 		top: 45px;
 		border:0;
 		border-top:4px solid #e67e22;
 	}
-	.widget-area li ul li ul li > ul:before {
+	.main-navigation li ul li ul li > ul:before {
 		left:30px;
 		top: -9px;
 		border:0;
@@ -553,43 +602,16 @@
 		border-left:5px solid transparent;
 		border-right:5px solid transparent;
 	}
-	.widget-area li ul li ul li:hover > ul {
+	.main-navigation li ul li ul li:hover > ul {
 		left:30px;
 		min-width:150px;
 		top: 35px;
 	}
-	.widget-area li ul a {
+	.main-navigation li ul a {
 		font-size:12px;
 	}
-	.widget-area li ul a i {
+	.main-navigation li ul a i {
 		font-size:14px;
-    }
-    .widget-area ul li {
-        list-style-type: none;
-    }
+	}
     
-}
-.widget-area ul li {
-    list-style-type: none;
-}
-.widget-title {
-  max-width: max-content;
-  padding: 3%;
-}
-
-/* site title */
-
-.site-title{
-  padding: 0px;
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px;
-  color: #FFF;
-  }
-.site-title :hover{
-  color:#e67e22;
-
-}
-.site-title :link a{
-  color:#e67e22;
-
 }
