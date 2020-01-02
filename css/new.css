@@ -593,3 +593,17 @@
   color:#e67e22;
 
 }
+
+/* footer */
+
+ 
+.site-footer {
+  color: white;
+  background-color: orange;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  bottom:0;
+ 
+}
