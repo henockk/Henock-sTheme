@@ -424,7 +424,6 @@
   padding: 0px;
   font-family: 'Dancing Script', cursive;
   font-size: 30px;
-  color: maroon;
   }
 .site-title :hover{
   color:#e67e22;
@@ -434,13 +433,16 @@
   color:#e67e22;
 
 }
+.site-title :visited{
+	color:#ff6567;
+}
 
 /* footer */
 
  
 .site-footer {
   color: white;
-  background-color: orange;
+  background-color: rgb(83, 75, 60);
   display: block;
   display: flex;
   flex-direction: column;
@@ -452,46 +454,36 @@
   display: block;
   text-decoration: none;
   padding: 12px 20px;
-  color: #777;
+  color: rgb(255, 253, 253);
   text-align: left;
   height: 36px;
   position: relative;
 }
- /* .footer-sidebar1{
-  display: block;
-  text-decoration: none;
-  padding: 12px 20px;
-  color: #777;
-  text-align: left;
-  height: 36px;
-  position: relative;
-} */
+#footer-sidebar ul li a:hover{
+color: #ac8768;
+text-decoration: none;
+}
+
 #footer-sidebar{
-  color: #777;
+  color: rgb(255, 255, 255);
 }
 #footer-sidebar ul li a{
-  color: #777;
+  color: rgb(255, 255, 255);
 }
 #prev a{
-  color: #777;
+  color: rgb(255, 255, 255);
 }
-/* .site-footer{
-  display: block;
-  text-decoration: none;
-  padding: 12px 20px;
-  color: #777;
-  text-align: left;
-  height: 36px;
-  position: relative;
-} */
 
 .footer-widget ul li{
   display: block;
   text-decoration: none;
   padding: 12px 20px;
-  color: #777;
+  color: rgb(255, 255, 255);
   text-align: left;
   height: 36px;
   position: relative;
   list-style-type: none;
+}
+.site-info a:visited{ 
+  color: rgb(255, 255, 255);
 }
