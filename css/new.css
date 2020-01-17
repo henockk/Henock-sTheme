@@ -513,8 +513,15 @@ text-decoration: none;
 .entry-date {
 	color: #404040;
 }	  
-.entry-header div span a:visited:hover{
+.entry-header div span a:visited:hover,
+.entry-header div span a:active:hover{
 	color:#e67e22;
 	text-decoration: none;
 	  
 }	  
+.entry-header div span a:visited{
+	color: #404040;
+}
+.entry-date a:hover{
+	color:#e67e22;
+}
