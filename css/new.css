@@ -424,19 +424,23 @@
   padding: 0px;
   font-family: 'Dancing Script', cursive;
   font-size: 30px;
+  text-decoration: none;
   }
-.site-title :hover{
+.site-title a:hover{
   color:#e67e22;
-
+  text-decoration: none;
 }
 .site-title :link a{
   color:#e67e22;
 
 }
 .site-title :visited{
-	color:#ff6567;
+	color: #404040;
 }
 
+.site-title :active{
+
+}
 /* footer */
 
  
@@ -487,3 +491,19 @@ text-decoration: none;
 .site-info a:visited{ 
   color: rgb(255, 255, 255);
 }
+
+/* entry title */
+
+.entry-title{}
+.entry-title a:hover{
+		color:#e67e22;
+		text-decoration: none;
+	  }
+	  .entry-title :link a{
+		color:#e67e22;
+	  
+	  }
+	  .entry-title :visited{
+		  color: #404040;
+	  }
+	  
