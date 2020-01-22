@@ -37,11 +37,7 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$henock_s_theme_description = get_bloginfo( 'description', 'display' );
-			if ( $henock_s_theme_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $henock_s_theme_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+			?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation ">
