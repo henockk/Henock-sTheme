@@ -1,6 +1,6 @@
 /* site header menu */
 
-.main-navigation ui a.active strong {
+/* .main-navigation ui a.active strong {
   display:block;
   font-size:10px;
   padding:3px 0;
@@ -13,7 +13,7 @@
   text-transform:lowercase;
   font-weight:normal;
   text-align:center;
-}
+} */
 
 .widget-area li {
   position: relative;
@@ -218,9 +218,10 @@
 
 .site-title{
   padding: 0px;
-  font-family: 'Dancing Script', cursive;
+  /* font-family: 'Dancing Script', cursive; */
   font-size: 30px;
   text-decoration: none;
+  color:#e67e22;
   }
 .site-title a:hover{
   color:#e67e22;
