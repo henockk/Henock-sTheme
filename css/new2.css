@@ -57,17 +57,28 @@ body {
   
 .main-navigation {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  background: #FFF;
-  /*height: 100px;*/
-  border-radius: 2px;
+width: max-content;
+  background: rgb(255, 255, 255);
+  border-bottom: 1px;
+  /* border: 1px solid #BBB; */
+  /* border-radius: 2px;
   -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  
-  /* == */
-  width: 250px;
-  /* == */
+-webkit-border-radius: 2px;; */
+  /* border: 1px solid rgb(202, 130, 130); */
+    
+}
+#site-navigation {
+  border-bottom: 1px;
+}
+.main-navigation ul  {
+ border-bottom: 1px;
+}
+.main-navigation ul li a:link, .main-navigation ul li a:visited {
+  /* border: #727171 solid 0.1px; */
+  display: block;
+padding: 10px 18px; 
+border: 0.5px solid #BBB;
+/* border-bottom: none; */
 }
 .main-navigation li {
   position: relative;
@@ -198,65 +209,6 @@ body {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
-/* == */
-/* 
-@-webkit-keyframes moveFromTop {
-    from {
-        opacity: 0;
-        -webkit-transform: translateY(200%);
-        -moz-transform: translateY(200%);
-        -ms-transform: translateY(200%);
-        -o-transform: translateY(200%);
-        transform: translateY(200%);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        -o-transform: translateY(0%);
-        transform: translateY(0%);
-    }
-}
-@-webkit-keyframes moveFromLeft {
-    from {
-        opacity: 0;
-        -webkit-transform: translateX(200%);
-        -moz-transform: translateX(200%);
-        -ms-transform: translateX(200%);
-        -o-transform: translateX(200%);
-        transform: translateX(200%);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translateX(0%);
-        -moz-transform: translateX(0%);
-        -ms-transform: translateX(0%);
-        -o-transform: translateX(0%);
-        transform: translateX(0%);
-    }
-}
-@-webkit-keyframes moveFromRight {
-    from {
-        opacity: 0;
-        -webkit-transform: translateX(-200%);
-        -moz-transform: translateX(-200%);
-        -ms-transform: translateX(-200%);
-        -o-transform: translateX(-200%);
-        transform: translateX(-200%);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translateX(0%);
-        -moz-transform: translateX(0%);
-        -ms-transform: translateX(0%);
-        -o-transform: translateX(0%);
-        transform: translateX(0%);
-    }
-} */
-
-
-
 .main-navigation li ul,
 .main-navigation li ul li ul {
   position: absolute;
@@ -264,7 +216,7 @@ body {
   min-width: 200px;
   padding: 0;
   margin: 0;
-  background: #FFF;
+  background: rgb(255, 255, 255);
   /*border-top: 4px solid #e67e22;*/
   opacity: 0;
   visibility: hidden;
