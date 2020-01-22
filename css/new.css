@@ -177,7 +177,7 @@
   border: 1px solid #e67e22;
   background: #e67e22;
   outline: none;
-  color: #FFF;
+  color: rgba(0, 0, 0, 0);
   margin-left: -4px;
   float:left;
   padding: 10px 10px 11px 10px;
@@ -199,11 +199,7 @@
 }
 
 
-@media only screen and (min-width: 960px) and (max-width: 1199px) {
-    .widget-area {
-		margin-left:10px;
-	}
-}
+
 
 
 .widget-area ul li {
