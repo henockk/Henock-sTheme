@@ -510,4 +510,56 @@ width: max-content;
 	
 }
 
+/* footer entry*/
 
+.entry-footer{
+  
+}
+
+.entry-footer :hover a{
+  color: #43e622;
+}
+
+.entry-footer span.cat-links a {
+  color: #e67e22;
+}
+
+.entry-footer span.cat-links :hover{
+  color: #43e622;
+}
+
+.entry-footer span.edit-link a {
+  color: #e67e22;
+}
+.entry-footer span.edit-link :hover {
+  color: #43e622;
+}
+
+/* comment area */
+
+
+.comments-area div p a{
+  color: #e67e22;
+}
+.comments-area div p :hover{
+  color:  #43e622;
+}
+
+/*comment-meta  */
+
+.comment-meta div a :hover{
+  color:  #43e622;
+}
+
+.comment-meta div a{
+  color:  #e67e22;
+}
+.comment-meta span.edit-class :hover{
+  color:  #43e622;
+}
+
+
+.comment-metadata a :link
+.comment-metadata a :visited{
+  color: #e67e22;
+}
