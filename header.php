@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Henock-s_Theme
+ * @package hkg
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site container">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'henock-s-theme' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'hkg' ); ?></a>
 
 	<header id="masthead" class="site-header row">
 		<div class="site-branding col-md-4">
@@ -41,7 +41,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation ">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'henock-s-theme' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hkg' ); ?></button>
 
 			<?php
 			wp_nav_menu( array(

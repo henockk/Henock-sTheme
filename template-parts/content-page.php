@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Henock-s_Theme
+ * @package hkg
  */
 
 ?>
@@ -14,14 +14,14 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php henock_s_theme_post_thumbnail(); ?>
+	<?php hkg_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content();
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'henock-s-theme' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hkg' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -34,7 +34,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'henock-s-theme' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'hkg' ),
 						array(
 							'span' => array(
 								'class' => array(),

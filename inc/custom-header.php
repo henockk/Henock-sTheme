@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Henock-s_Theme
+ * @package hkg
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses henock_s_theme_header_style()
+ * @uses hkg_header_style()
  */
-function henock_s_theme_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'henock_s_theme_custom_header_args', array(
+function hkg_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'hkg_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'henock_s_theme_header_style',
+		'wp-head-callback'       => 'hkg_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'henock_s_theme_custom_header_setup' );
+add_action( 'after_setup_theme', 'hkg_custom_header_setup' );
 
-if ( ! function_exists( 'henock_s_theme_header_style' ) ) :
+if ( ! function_exists( 'hkg_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see henock_s_theme_custom_header_setup().
+	 * @see hkg_custom_header_setup().
 	 */
-	function henock_s_theme_header_style() {
+	function hkg_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

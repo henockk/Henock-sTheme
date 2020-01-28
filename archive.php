@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Henock-s_Theme
+ * @package hkg
  */
 
 get_header();

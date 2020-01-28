@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Henock-s_Theme
+ * @package hkg
  */
 
 ?>
@@ -47,16 +47,16 @@
         </div>
       </div>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'henock-s-theme' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hkg' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'henock-s-theme' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'hkg' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'henock-s-theme' ), 'henock-s-theme', '<a href="http://underscores.me/">Underscores.me</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'hkg' ), 'hkg', '<a href="http://underscores.me/">Underscores.me</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

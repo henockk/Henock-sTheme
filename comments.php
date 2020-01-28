@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Henock-s_Theme
+ * @package hkg
  */
 
 /*
@@ -28,18 +28,18 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$henock_s_theme_comment_count = get_comments_number();
-			if ( '1' === $henock_s_theme_comment_count ) {
+			$hkg_comment_count = get_comments_number();
+			if ( '1' === $hkg_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'henock-s-theme' ),
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'hkg' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $henock_s_theme_comment_count, 'comments title', 'henock-s-theme' ) ),
-					number_format_i18n( $henock_s_theme_comment_count ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $hkg_comment_count, 'comments title', 'hkg' ) ),
+					number_format_i18n( $hkg_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			}
@@ -63,7 +63,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'henock-s-theme' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'hkg' ); ?></p>
 			<?php
 		endif;
 
