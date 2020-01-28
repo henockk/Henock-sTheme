@@ -1,3 +1,4 @@
+/* sidebar */
 .widget-area ul {
 	list-style-type: none;
 	padding: 0;
@@ -16,9 +17,14 @@
 	cursor: pointer;
 }
 
-.widget-area ul li span a{
-	color: white;
+.widget-area ul li span {
+  color: antiquewhite;
 	mix-blend-mode: difference;
+}
+
+.widget-area ul li a{
+  color: antiquewhite;
+  mix-blend-mode: difference;
 }
 
 .widget-area ul li::before {
