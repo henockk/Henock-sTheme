@@ -66,6 +66,69 @@
   padding: 3%;
 }
 
+/* 404 page */
+
+
+.widget ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.widget ul li {
+	font-size: 25px;
+	font-family: sans-serif;
+	background-color: white;
+	border: 2px solid black;
+	letter-spacing: 0.1em;
+	width: 12em;
+	height: 1.5em;
+	overflow: hidden;
+	margin: 0.5em;
+	cursor: pointer;
+}
+
+.widget ul li span {
+  color: antiquewhite;
+	mix-blend-mode: difference;
+}
+
+.widget ul li a{
+  color: antiquewhite;
+  mix-blend-mode: difference;
+}
+
+.widget ul li::before {
+	content: '';
+	position: absolute;
+	width: 1.5em;
+	height: inherit;
+	background-color: rgb(31, 68, 34);
+	border-radius: 50%;
+	top: 0;
+	left: -0.75em;
+	transition: 0.5s ease-out;
+}
+
+.widget ul li:hover::before {
+	transform: scale(7);
+}
+
+.widget li {
+  position: relative;
+ 
+} 
+.widget li a {
+  display: block;
+  text-decoration: none;
+  color: #212529;
+  text-align: left;
+  position: relative;
+ 
+}
+.widget li:hover > a {
+  /* color: #e67e22; */
+}
+
 /* site title */
 
 .site-title{
